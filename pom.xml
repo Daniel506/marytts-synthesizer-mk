@@ -28,13 +28,6 @@
     
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-asm</artifactId>
-      <version>3.1.4.RELEASE</version>
-    </dependency>
-
-    
-    <dependency>
-      <groupId>org.springframework</groupId>
       <artifactId>spring-aspects</artifactId>
       <version>4.0.8.RELEASE</version>
     </dependency>
@@ -87,6 +80,35 @@
       <version>4.12</version>
     </dependency>
     
+    <dependency>
+    	<groupId>org.incava</groupId>
+		<artifactId>java-diff</artifactId>
+		<version>1.1</version>  
+    </dependency>
+    
+    <dependency>
+      <groupId>de.dfki.mary</groupId>
+      <artifactId>marytts-common</artifactId>
+      <version>5.2</version>
+      <scope>system</scope>
+      <systemPath>C:/Users/DANIEL/git/marytts-synthesizer-mk/src/main/lib/marytts-common-5.2-SNAPSHOT.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+      <groupId>de.dfki.mary</groupId>
+      <artifactId>marytts-signalproc</artifactId>
+      <version>5.2</version>
+      <scope>system</scope>
+      <systemPath>C:/Users/DANIEL/git/marytts-synthesizer-mk/src/main/lib/marytts-signalproc-5.2-SNAPSHOT.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+      <groupId>de.dfki.mary</groupId>
+      <artifactId>marytts-client</artifactId>
+      <version>5.2</version>
+      <scope>system</scope>
+      <systemPath>C:/Users/DANIEL/git/marytts-synthesizer-mk/src/main/lib/marytts-client-5.2-SNAPSHOT.jar</systemPath>
+  	</dependency>
   </dependencies>
   
 </project>
