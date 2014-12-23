@@ -112,6 +112,13 @@
       <scope>system</scope>
       <systemPath>${basedir}/src/main/lib/marytts-client-5.2-SNAPSHOT.jar</systemPath>
   	</dependency>
+    
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    
   </dependencies>
   
 </project>

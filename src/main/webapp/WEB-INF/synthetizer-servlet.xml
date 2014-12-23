@@ -20,6 +20,8 @@
       <property name="suffix" value=".jsp" />
    </bean>
    
-   <mvc:resources mapping="/resources/**" location="/resources/synthesis/" />
+   <mvc:annotation-driven />
+   
+   <mvc:resources mapping="/resources/**" location="/resources/" />
    
 </beans>
