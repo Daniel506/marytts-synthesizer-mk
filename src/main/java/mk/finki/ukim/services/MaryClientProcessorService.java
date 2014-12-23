@@ -1,25 +1,18 @@
 package mk.finki.ukim.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import marytts.client.MaryClient;
-import marytts.client.MaryClient.AudioPlayerListener;
-import marytts.client.http.MaryHttpClient;
 import marytts.util.data.audio.AudioPlayer;
 
-@Service
 public class MaryClientProcessorService {
 
-	@Autowired
-	private MaryClient processor;
+	private static MaryClient processor;
 	
-	@Autowired
-	AudioPlayer audioPlayer = new AudioPlayer();
-	
-	public AudioPlayer processInput(String inputText, String inputType, String selectedVoice) {
+	public static void processInput(String inputText, String inputType, String selectedVoice) {
 		
 		try {
+		  
+		  AudioPlayer audioPlayer = new AudioPlayer();
+		  
       String locale = "mk";
   	  boolean streamMp3 = false;
   	
@@ -52,13 +45,10 @@ public class MaryClientProcessorService {
 	      }*/
 	  	);
 	  	
-	  	return audioPlayer;
-	  	
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
 	        
-	  return null;
 	}
 	
 }

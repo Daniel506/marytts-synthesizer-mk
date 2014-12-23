@@ -1,10 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
   <groupId>mk.ukim.finki</groupId>
   <artifactId>Synthetizer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   
   <dependencies>
   
@@ -91,7 +94,7 @@
       <artifactId>marytts-common</artifactId>
       <version>5.2</version>
       <scope>system</scope>
-      <systemPath>C:/Users/DANIEL/git/marytts-synthesizer-mk/src/main/lib/marytts-common-5.2-SNAPSHOT.jar</systemPath>
+      <systemPath>${basedir}/src/main/lib/marytts-common-5.2-SNAPSHOT.jar</systemPath>
   	</dependency>
   	
   	<dependency>
@@ -99,7 +102,7 @@
       <artifactId>marytts-signalproc</artifactId>
       <version>5.2</version>
       <scope>system</scope>
-      <systemPath>C:/Users/DANIEL/git/marytts-synthesizer-mk/src/main/lib/marytts-signalproc-5.2-SNAPSHOT.jar</systemPath>
+      <systemPath>${basedir}/src/main/lib/marytts-signalproc-5.2-SNAPSHOT.jar</systemPath>
   	</dependency>
   	
   	<dependency>
@@ -107,7 +110,7 @@
       <artifactId>marytts-client</artifactId>
       <version>5.2</version>
       <scope>system</scope>
-      <systemPath>C:/Users/DANIEL/git/marytts-synthesizer-mk/src/main/lib/marytts-client-5.2-SNAPSHOT.jar</systemPath>
+      <systemPath>${basedir}/src/main/lib/marytts-client-5.2-SNAPSHOT.jar</systemPath>
   	</dependency>
   </dependencies>
   
