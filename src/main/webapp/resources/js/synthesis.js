@@ -11,7 +11,7 @@ $(document).ready(function ($) {
     
       $.ajax({
         type: 'POST',
-        url: '/synthesize',
+        url: '/Synthetizer/synthesize',
         data: data
       });
   });

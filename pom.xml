@@ -114,6 +114,14 @@
   	</dependency>
     
     <dependency>
+      <groupId>de.dfki.mary</groupId>
+      <artifactId>marytts-runtime</artifactId>
+      <version>5.2</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/src/main/lib/marytts-runtime-5.2-SNAPSHOT.jar</systemPath>
+  	</dependency>
+  	
+    <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>

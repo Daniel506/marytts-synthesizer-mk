@@ -10,6 +10,7 @@ import mk.finki.ukim.services.MaryClientProcessorService;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class SynthesiserController {
 
     protected final Log logger = LogFactory.getLog(getClass());
+    
+    @Autowired
+    MaryClientProcessorService maryClientProcessorService;
     
     @RequestMapping("/hello")
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
@@ -48,7 +52,7 @@ public class SynthesiserController {
     		HttpServletResponse response)
             throws ServletException, IOException {
 
-    		MaryClientProcessorService.processInput(inputText, inputType, selectedVoice);
+    		maryClientProcessorService.processInput(inputText, inputType, selectedVoice);
     		
         return new ModelAndView("hello");
     }
