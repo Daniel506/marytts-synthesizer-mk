@@ -11,5 +11,10 @@
     <h1>Hello - Spring Application</h1>
     <p>Greetings.</p>
     <input id="synthesize" type="button" value="SendRequest" />
+    
+    <audio controls>
+  	  <source src="<c:url value="/resources/wav/example.wav" />" type="audio/wav">
+	</audio>
+
   </body>
 </html>
