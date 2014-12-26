@@ -12,7 +12,10 @@ $(document).ready(function ($) {
       $.ajax({
         type: 'POST',
         url: '/Synthetizer/synthesize',
-        data: data
+        data: data,
+        success: function (response) {
+        	$('audio').attr('src', '/Synthetizer/resources/wav/temp.wav');
+        }
       });
   });
 
