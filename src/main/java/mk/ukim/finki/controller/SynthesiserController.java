@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mk.finki.ukim.services.MaryClientAudioService;
 import mk.finki.ukim.services.MaryClientProcessorService;
 
 import org.apache.commons.logging.Log;
@@ -23,7 +24,7 @@ public class SynthesiserController {
     protected final Log logger = LogFactory.getLog(getClass());
     
     @Autowired
-    MaryClientProcessorService maryClientProcessorService;
+    MaryClientAudioService maryClientAudioService;
     
     @RequestMapping("/hello")
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
@@ -52,7 +53,7 @@ public class SynthesiserController {
     		HttpServletResponse response)
             throws ServletException, IOException {
 
-    		maryClientProcessorService.processInput(inputText, inputType, selectedVoice);
+    		maryClientAudioService.streamAudio(inputText, inputType, selectedVoice);
     		
         return new ModelAndView("hello");
     }

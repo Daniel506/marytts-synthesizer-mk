@@ -6,8 +6,8 @@ $(document).ready(function ($) {
     var data = {};
     
     data['inputText'] = 'Hello how are you?';
-    data['inputType'] = 'blabla';
-    data['selectedVoice'] = 'hahahaha';
+    data['inputType'] = 'TEXT';
+    data['selectedVoice'] = 'cmu-slt-hsmm';
     
       $.ajax({
         type: 'POST',

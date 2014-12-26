@@ -16,12 +16,16 @@ import marytts.util.io.FileUtils;
 @Service
 public class MaryClientProcessorService {
 
-	public void processInput(String inputText, String InputType, String selectedVoice) {
+	private static final String SERVER_HOST_NAME = "http://localhost:59125";
+
+	public InputStream processInput(String inputText, String InputType, String selectedVoice) {
 		try {
-	    requestInputStream(inputText, InputType, "AUDIO", "mk", "WAVE", selectedVoice, null, null, false, null);
+	    return requestInputStream(inputText, InputType, "AUDIO", "en_US", "WAVE", selectedVoice, null, null, false, null);
     } catch (IOException e) {
 	    e.printStackTrace();
     }
+		
+		return null;
 	}
 	
   private InputStream requestInputStream(String input, String inputType, String outputType, String locale, String audioType, 
@@ -59,7 +63,7 @@ public class MaryClientProcessorService {
 	
 	  //to make HTTP Post request with HttpURLConnection
 	  // data.hostAddress.getHttpAddress() = localhost
-	  URL url = new URL("localhost"+"/process");
+	  URL url = new URL(SERVER_HOST_NAME+"/process");
 	  HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 	
 	  conn.setRequestMethod("POST");
