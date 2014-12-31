@@ -2,12 +2,13 @@ package mk.ukim.finki.controller;
 
 import java.io.IOException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import mk.finki.ukim.services.MaryClientAudioService;
-import mk.finki.ukim.services.MaryClientProcessorService;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -53,7 +54,11 @@ public class SynthesiserController {
     		HttpServletResponse response)
             throws ServletException, IOException {
 
-    		maryClientAudioService.streamAudio(inputText, inputType, selectedVoice);
+    	HttpSession session = request.getSession();
+			ServletContext servletContext = session.getServletContext();
+			String contextPath = servletContext.getRealPath("/");
+  		
+    	maryClientAudioService.streamAudio(contextPath, inputText, inputType, selectedVoice);
     		
         return new ModelAndView("hello");
     }

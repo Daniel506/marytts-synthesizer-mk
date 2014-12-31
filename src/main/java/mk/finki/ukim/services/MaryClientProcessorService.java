@@ -9,9 +9,9 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Map;
 
-import org.springframework.stereotype.Service;
-
 import marytts.util.io.FileUtils;
+
+import org.springframework.stereotype.Service;
 
 @Service
 public class MaryClientProcessorService {
@@ -28,6 +28,7 @@ public class MaryClientProcessorService {
 		return null;
 	}
 	
+  @SuppressWarnings("deprecation")
   private InputStream requestInputStream(String input, String inputType, String outputType, String locale, String audioType, 
       String defaultVoiceName, String defaultStyle, Map<String, String> effects, //String defaultEffects,
       boolean streamingAudio, String outputTypeParams) throws IOException {
